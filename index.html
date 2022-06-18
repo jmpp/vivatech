@@ -24,12 +24,23 @@
       touch-action: pan-x pan-y;
       height: 100%
     }
+
+    img.qr {
+      width: 100px;
+      position: absolute;
+      bottom: 0.5rem;
+      right: 0.5rem;
+    }
   </style>
   <script src="lib/p5.min.js"></script>
   <script src="scripts/bulles.js"></script>
 </head>
 
 <body>
+  <script>
+    (document.URL.startsWith('http://localhost') || document.URL.startsWith('http://127.0.0.1')) &&
+      document.write(`<img src="images/qrcode-local.png" class="qr" draggable="false">`)
+  </script>
 </body>
 
 </html>
